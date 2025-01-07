@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the food page</h1>
+    <p>Add new food below</p>
+    <input type="text" placeholder="Add food..." class="bg-gray-200 m-2 p-2 rounded-xl">
+    <input type="number" placeholder="Add calorie..." class="bg-gray-200 m-2 p-2 rounded-xl">
+    <button class="p-2 bg-green-100 rounded-xl hover:bg-green-300">➕</button>
+    {% for food in foods %}
+    <li class="list-none p-2 m-2 bg-slate-200  rounded-xl">
+        <strong class="p-auto rounded-xl">{{food.title}}</strong> : {{ food.calories }} calories
+        <button class="p-2 bg-red-100 rounded-xl hover:bg-red-300">🗑️</button>
+    </li>
+    {% endfor %}
+
+{% endblock %}
