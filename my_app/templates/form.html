@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Form Page{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <h1 class="text-blue-600 text-xl p-5">Add food and calorie count</h1>
+
+    {% csrf_token %}
+
+    {% for field in form %}
+    <label for="{{field.id}}">{{field.label}}</label>
+    
+    {{field}}
+    {% endfor %}
+    <!-- <input type="text" placeholder="Calorie count" class="bg-slate-100 border-slate-400 p-2 m-2 "> -->
+    <!-- <input type="text" placeholder="Add food" class=" "> -->
+
+    <button type="submit" class="p-2 bg-green-100 rounded-xl hover:bg-green-300">➕</button>
+
+</form>
+
+{% endblock %}
