@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 
 DATABASES={
     'default':dj_database_url.parse("postgresql://calorie_rho0_user:lEUDdNOHbSE4IFQ6zF1k1UEEHymEcFCw@dpg-ctv4c2dds78s738nh3q0-a.oregon-postgres.render.com/calorie_rho0")
-}
+} 
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
